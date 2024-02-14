@@ -4,8 +4,11 @@ import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 
 /**
+ * IPostEntityProcessingService bliver ikke brugt endnu
  *
- * @author jcs
+ * Pre-condtion: At der er gameData og en world at process
+ * Post-condtioon: At man kan process det overstående.
+ *
  */
 public interface IPostEntityProcessingService {
 

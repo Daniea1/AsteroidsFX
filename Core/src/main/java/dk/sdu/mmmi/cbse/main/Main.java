@@ -130,10 +130,13 @@ public class Main extends Application {
 
     }
 
+    //Basically laver den en list også længer oppe i
     private Collection<? extends IGamePluginService> getPluginServices() {
         return ServiceLoader.load(IGamePluginService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
     }
 
+    //Basically laver den en liste med alle entities, også længere oppe i update metoden, der
+    //processer den alle entities fx player som bevæger sig
     private Collection<? extends IEntityProcessingService> getEntityProcessingServices() {
         return ServiceLoader.load(IEntityProcessingService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
     }
