@@ -27,12 +27,13 @@ public class EnemyControlSystem implements IEntityProcessingService {
         for (Entity player : world.getEntities(Enemy.class)) {
 
             randomNumber = random.nextInt(10);
+            randomNumber2 = random.nextInt(50);
 
             if (randomNumber ==0) {
-                player.setRotation(player.getRotation() - 5);
+                player.setRotation(player.getRotation() - 15);
             }
             if (randomNumber ==1) {
-                player.setRotation(player.getRotation() + 5);
+                player.setRotation(player.getRotation() + 15);
             }
             if (true) {
                 double changeX = Math.cos(Math.toRadians(player.getRotation()));
@@ -40,7 +41,7 @@ public class EnemyControlSystem implements IEntityProcessingService {
                 player.setX(player.getX() + changeX);
                 player.setY(player.getY() + changeY);
             }
-            if(gameData.getKeys().isDown(GameKeys.SPACE)) {
+            if (randomNumber2 ==5) {
                 getBulletSPIs().stream().findFirst().ifPresent(
                         spi -> {world.addEntity(spi.createBullet(player, gameData));}
                 );

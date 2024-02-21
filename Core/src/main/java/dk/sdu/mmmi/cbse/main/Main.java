@@ -130,7 +130,6 @@ public class Main extends Application {
 
     }
 
-    //Basically laver den en list også længer oppe i
     private Collection<? extends IGamePluginService> getPluginServices() {
         return ServiceLoader.load(IGamePluginService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
     }
