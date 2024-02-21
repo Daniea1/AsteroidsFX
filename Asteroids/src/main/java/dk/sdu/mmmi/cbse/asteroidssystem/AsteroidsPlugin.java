@@ -23,7 +23,7 @@ public class AsteroidsPlugin implements IGamePluginService {
     private Entity createAsteroids(GameData gameData) {
 
         Entity asteroids = new Asteroids();
-        asteroids.setPolygonCoordinates(0, -10, 8, -5, 8, 5, 0, 10, -8, 5, -8, -5);
+        asteroids.setPolygonCoordinates(0, -20, 16, -10, 16, 10, 0, 20, -16, 10, -16, -10);
         asteroids.setX(gameData.getDisplayWidth()/2);
         asteroids.setY(0);
         asteroids.setRotation(90);

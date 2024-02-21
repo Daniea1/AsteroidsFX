@@ -14,7 +14,7 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
     public void process(GameData gameData, World world) {
 
         Random random = new Random();
-        int randomInt = random.nextInt(100);
+        int randomInt = random.nextInt(150);
 
             for (Entity Asteroids : world.getEntities(Asteroids.class)) {
                 double changeX = Math.cos(Math.toRadians(Asteroids.getRotation()));
@@ -36,7 +36,7 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
         int randomXwidth = random.nextInt(gameData.getDisplayWidth());
 
         Entity asteroids = new Asteroids();
-        asteroids.setPolygonCoordinates(0, -10, 8, -5, 8, 5, 0, 10, -8, 5, -8, -5);
+        asteroids.setPolygonCoordinates(0, -20, 16, -10, 16, 10, 0, 20, -16, 10, -16, -10);
         asteroids.setX(randomXwidth);
         asteroids.setY(0);
         asteroids.setRotation(90);
