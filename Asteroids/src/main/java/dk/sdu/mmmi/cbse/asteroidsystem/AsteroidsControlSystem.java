@@ -1,6 +1,5 @@
-package dk.sdu.mmmi.cbse.asteroidssystem;
+package dk.sdu.mmmi.cbse.asteroidsystem;
 
-import dk.sdu.mmmi.cbse.common.bullet.Bullet;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
@@ -24,7 +23,7 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
             }
             if (randomInt ==1) {
 
-                Entity asteroids = new Asteroids();
+                Entity asteroids;
                 asteroids = createAsteroids(gameData);
                 world.addEntity(asteroids);
             }
