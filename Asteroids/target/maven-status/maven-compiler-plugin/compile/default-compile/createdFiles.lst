@@ -1,4 +1,4 @@
-dk/sdu/mmmi/cbse/asteroidssystem/AsteroidsControlSystem.class
+dk/sdu/mmmi/cbse/asteroidsystem/Asteroids.class
+dk/sdu/mmmi/cbse/asteroidsystem/AsteroidsControlSystem.class
 module-info.class
-dk/sdu/mmmi/cbse/asteroidssystem/Asteroids.class
-dk/sdu/mmmi/cbse/asteroidssystem/AsteroidsPlugin.class
+dk/sdu/mmmi/cbse/asteroidsystem/AsteroidsPlugin.class
