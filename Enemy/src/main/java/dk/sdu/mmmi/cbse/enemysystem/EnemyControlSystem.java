@@ -24,43 +24,47 @@ public class EnemyControlSystem implements IEntityProcessingService {
         int randomNumber;
         int randomNumber2;
 
-        for (Entity player : world.getEntities(Enemy.class)) {
+        for (Entity enemy : world.getEntities(Enemy.class)) {
 
-            randomNumber = random.nextInt(10);
-            randomNumber2 = random.nextInt(50);
+            randomNumber = random.nextInt(50);
+            randomNumber2 = random.nextInt(30);
 
             if (randomNumber ==0) {
-                player.setRotation(player.getRotation() - 15);
+                enemy.setRotation(enemy.getRotation() - 45);
             }
             if (randomNumber ==1) {
-                player.setRotation(player.getRotation() + 15);
+                enemy.setRotation(enemy.getRotation() + 45);
             }
             if (true) {
-                double changeX = Math.cos(Math.toRadians(player.getRotation()));
-                double changeY = Math.sin(Math.toRadians(player.getRotation()));
-                player.setX(player.getX() + changeX);
-                player.setY(player.getY() + changeY);
+                double changeX = Math.cos(Math.toRadians(enemy.getRotation()));
+                double changeY = Math.sin(Math.toRadians(enemy.getRotation()));
+                enemy.setX(enemy.getX() + changeX);
+                enemy.setY(enemy.getY() + changeY);
             }
             if (randomNumber2 ==5) {
                 getBulletSPIs().stream().findFirst().ifPresent(
-                        spi -> {world.addEntity(spi.createBullet(player, gameData));}
+                        spi -> {world.addEntity(spi.createBullet(enemy, gameData));}
                 );
             }
 
-            if (player.getX() < 0) {
-                player.setX(1);
+            if (enemy.getX() < 0) {
+                enemy.setX(1);
+                enemy.setRotation(enemy.getRotation() + 180);
             }
 
-            if (player.getX() > gameData.getDisplayWidth()) {
-                player.setX(gameData.getDisplayWidth()-1);
+            if (enemy.getX() > gameData.getDisplayWidth()) {
+                enemy.setX(gameData.getDisplayWidth()-1);
+                enemy.setRotation(enemy.getRotation() + 180);
             }
 
-            if (player.getY() < 0) {
-                player.setY(1);
+            if (enemy.getY() < 0) {
+                enemy.setY(1);
+                enemy.setRotation(enemy.getRotation() + 180);
             }
 
-            if (player.getY() > gameData.getDisplayHeight()) {
-                player.setY(gameData.getDisplayHeight()-1);
+            if (enemy.getY() > gameData.getDisplayHeight()) {
+                enemy.setY(gameData.getDisplayHeight()-1);
+                enemy.setRotation(enemy.getRotation() + 180);
             }
 
 
