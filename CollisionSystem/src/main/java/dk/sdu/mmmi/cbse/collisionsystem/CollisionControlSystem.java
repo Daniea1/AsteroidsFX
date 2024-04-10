@@ -1,14 +1,12 @@
 package dk.sdu.mmmi.cbse.collisionsystem;
 
-import dk.sdu.mmmi.cbse.asteroidsystem.Asteroids;
+import dk.sdu.mmmi.cbse.HelloWorld;
 import dk.sdu.mmmi.cbse.common.bullet.Bullet;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
-import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 import dk.sdu.mmmi.cbse.enemysystem.Enemy;
-import dk.sdu.mmmi.cbse.playersystem.Player;
 
 import static java.lang.Math.sqrt;
 
@@ -18,7 +16,7 @@ public class CollisionControlSystem implements IEntityProcessingService {
     public void process(GameData gameData, World world) {
         // for loop for collision between bullet and asteroids
         for (Entity entityBullet : world.getEntities(Bullet.class)) {
-            for (Entity entityAsteroid : world.getEntities(Asteroids.class)) {
+            for (Entity entityAsteroid : world.getEntities(HelloWorld.class)) {
                 if (isCollided(entityAsteroid, entityBullet)) {
                     entityAsteroid.setHitPoints(entityAsteroid.getHitPoints() - 1);
                     if (entityAsteroid.getHitPoints()<1){
@@ -30,8 +28,8 @@ public class CollisionControlSystem implements IEntityProcessingService {
         }
 
         // for loop for collision between ship and asteroids
-        for (Entity entityShip : world.getEntities(Player.class)) {
-            for (Entity entityAsteroid : world.getEntities(Asteroids.class)) {
+        for (Entity entityShip : world.getEntities(HelloWorld.class)) {
+            for (Entity entityAsteroid : world.getEntities(HelloWorld.class)) {
                 if (isCollided(entityAsteroid, entityShip)) {
                     world.removeEntity(entityShip);
                 }
@@ -52,7 +50,7 @@ public class CollisionControlSystem implements IEntityProcessingService {
         }
 
         // for loop for collision between bullet and Player
-        for (Entity entityPlayer : world.getEntities(Player.class)) {
+        for (Entity entityPlayer : world.getEntities(HelloWorld.class)) {
             for (Entity entityBullet : world.getEntities(Bullet.class)) {
                 if (isCollided(entityPlayer, entityBullet)) {
                     entityPlayer.setHitPoints(entityPlayer.getHitPoints()-1);

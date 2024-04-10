@@ -1,4 +1,4 @@
-package dk.sdu.mmmi.cbse.asteroidsystem;
+package dk.sdu.mmmi.cbse;
 
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
@@ -15,7 +15,7 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
         Random random = new Random();
         int randomInt = random.nextInt(150);
 
-            for (Entity bigAsteroids : world.getEntities(Asteroids.class)) {
+            for (Entity bigAsteroids : world.getEntities(HelloWorld.class)) {
                 double changeX = Math.cos(Math.toRadians(bigAsteroids.getRotation()));
                 double changeY = Math.sin(Math.toRadians(bigAsteroids.getRotation()));
                 bigAsteroids.setX(bigAsteroids.getX() + changeX);
@@ -23,14 +23,14 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
 
                 if (bigAsteroids.getHitPoints() == 2){
 
-                    Entity asteroidsSmallRight = new Asteroids();
+                    Entity asteroidsSmallRight = new HelloWorld();
                     asteroidsSmallRight.setPolygonCoordinates(0, -10, 8, -5, 8, 5, 0, 10, -8, 5, -8, -5);
                     asteroidsSmallRight.setX(bigAsteroids.getX());
                     asteroidsSmallRight.setY(bigAsteroids.getY());
                     asteroidsSmallRight.setRotation(bigAsteroids.getRotation()+15);
                     world.addEntity(asteroidsSmallRight);
 
-                    Entity asteroidsSmallLeft = new Asteroids();
+                    Entity asteroidsSmallLeft = new HelloWorld();
                     asteroidsSmallLeft.setPolygonCoordinates(0, -10, 8, -5, 8, 5, 0, 10, -8, 5, -8, -5);
                     asteroidsSmallLeft.setX(bigAsteroids.getX());
                     asteroidsSmallLeft.setY(bigAsteroids.getY());
@@ -55,7 +55,7 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
         Random random = new Random();
         int randomXwidth = random.nextInt(gameData.getDisplayWidth());
 
-        Entity asteroids = new Asteroids();
+        Entity asteroids = new HelloWorld();
         asteroids.setPolygonCoordinates(0, -20, 16, -10, 16, 10, 0, 20, -16, 10, -16, -10);
         asteroids.setX(randomXwidth);
         asteroids.setY(0);

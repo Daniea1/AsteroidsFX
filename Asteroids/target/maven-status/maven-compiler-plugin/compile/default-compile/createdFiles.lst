@@ -1,4 +1,5 @@
-dk/sdu/mmmi/cbse/asteroidsystem/Asteroids.class
-dk/sdu/mmmi/cbse/asteroidsystem/AsteroidsControlSystem.class
+dk/sdu/mmmi/cbse/AsteroidsControlSystem.class
+dk/sdu/mmmi/cbse/HelloWorld.class
 module-info.class
-dk/sdu/mmmi/cbse/asteroidsystem/AsteroidsPlugin.class
+dk/sdu/mmmi/cbse/AsteroidsPlugin.class
+dk/sdu/mmmi/cbse/EntityProcessor.class

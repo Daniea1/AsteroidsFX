@@ -1,4 +1,4 @@
-package dk.sdu.mmmi.cbse.asteroidsystem;
+package dk.sdu.mmmi.cbse;
 
 import dk.sdu.mmmi.cbse.common.bullet.Bullet;
 import dk.sdu.mmmi.cbse.common.data.Entity;
@@ -22,7 +22,7 @@ public class AsteroidsPlugin implements IGamePluginService {
 
     private Entity createAsteroids(GameData gameData) {
 
-        Entity asteroids = new Asteroids();
+        Entity asteroids = new HelloWorld();
         asteroids.setPolygonCoordinates(0, -20, 16, -10, 16, 10, 0, 20, -16, 10, -16, -10);
         asteroids.setX(gameData.getDisplayWidth()/2);
         asteroids.setY(0);
