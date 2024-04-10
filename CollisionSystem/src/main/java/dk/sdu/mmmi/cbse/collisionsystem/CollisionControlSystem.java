@@ -1,12 +1,11 @@
 package dk.sdu.mmmi.cbse.collisionsystem;
 
-import dk.sdu.mmmi.cbse.asteroidsystem.Asteroids;
+import dk.sdu.cbse.common.asteroids.Asteroids;
 import dk.sdu.mmmi.cbse.common.bullet.Bullet;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
-import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 import dk.sdu.mmmi.cbse.enemysystem.Enemy;
 import dk.sdu.mmmi.cbse.playersystem.Player;
 

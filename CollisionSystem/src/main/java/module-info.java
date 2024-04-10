@@ -7,5 +7,6 @@ module CollisionSystem {
     requires Asteroids;
     requires Player;
     requires Enemy;
+    requires CommonAsteroids;
     provides IEntityProcessingService with dk.sdu.mmmi.cbse.collisionsystem.CollisionControlSystem;
 }

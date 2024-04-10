@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DK"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/21.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/CollisionSystem/target/surefire 2024-04-05T14-15-41_410-jvmRun1 surefire-20240405141545467_1tmp surefire_0-20240405141545467_2tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/CollisionSystem/target/surefire 2024-04-10T12-42-39_256-jvmRun1 surefire-20240410124243769_1tmp surefire_0-20240410124243769_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/CollisionSystem/target/test-classes:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/dj/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/dj/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:"/>
@@ -20,7 +20,7 @@
     <property name="user.home" value="/Users/dj"/>
     <property name="user.language" value="da"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="jdk.module.path" value="/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/CollisionSystem/target/classes:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/Common/target/Common-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/Asteroids/target/Asteroids-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/CommonBullet/target/CommonBullet-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/Player/target/Player-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/Enemy/target/Enemy-1.0.1-SNAPSHOT.jar"/>
+    <property name="jdk.module.path" value="/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/CollisionSystem/target/classes:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/Common/target/Common-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/Asteroids/target/Asteroids-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/CommonBullet/target/CommonBullet-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/CommonAsteroids/target/CommonAsteroids-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/Player/target/Player-1.0.1-SNAPSHOT.jar:/Users/dj/Desktop/Software_ingeniør/4_Semester/Komponentbaserede systemer/AsteroidsFX/Enemy/target/Enemy-1.0.1-SNAPSHOT.jar"/>
     <property name="java.version.date" value="2024-01-16"/>
     <property name="java.home" value="/opt/homebrew/Cellar/openjdk/21.0.2/libexec/openjdk.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
@@ -59,6 +59,6 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="isNotCollided" classname="dk.sdu.mmmi.cbse.collisionsystem.CollisionControlSystemTest" time="0.033"/>
+  <testcase name="isNotCollided" classname="dk.sdu.mmmi.cbse.collisionsystem.CollisionControlSystemTest" time="0.032"/>
   <testcase name="isCollided" classname="dk.sdu.mmmi.cbse.collisionsystem.CollisionControlSystemTest" time="0.001"/>
 </testsuite>
