@@ -51,7 +51,7 @@ public class CollisionControlSystem implements IEntityProcessingService {
             }
         }
 
-        // for loop for collision between bullet and Enemy
+        // for loop for collision between bullet and Player
         for (Entity entityPlayer : world.getEntities(Player.class)) {
             for (Entity entityBullet : world.getEntities(Bullet.class)) {
                 if (isCollided(entityPlayer, entityBullet)) {
