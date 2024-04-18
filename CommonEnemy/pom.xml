@@ -9,8 +9,8 @@
         <version>1.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>dk.sdu.mmmi.cbse.enemysystem</groupId>
-    <artifactId>Enemy</artifactId>
+    <groupId>dk.sdu.cbse.common.enemy</groupId>
+    <artifactId>CommonEnemy</artifactId>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
@@ -21,18 +21,6 @@
         <dependency>
             <groupId>dk.sdu.mmmi.cbse</groupId>
             <artifactId>Common</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>dk.sdu.mmmi.cbse</groupId>
-            <artifactId>CommonBullet</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>dk.sdu.cbse.common.enemy</groupId>
-            <artifactId>CommonEnemy</artifactId>
             <version>1.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
