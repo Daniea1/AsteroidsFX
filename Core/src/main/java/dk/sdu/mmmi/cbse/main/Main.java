@@ -118,9 +118,9 @@ public class Main extends Application {
             }
         }
 
-//        for (IPostEntityProcessingService postEntityProcessorService : getPostEntityProcessingServices()) {
-//            postEntityProcessorService.process(gameData, world);
-//        }
+        for (IPostEntityProcessingService postEntityProcessorService : getPostEntityProcessingServices()) {
+            postEntityProcessorService.process(gameData, world);
+        }
     }
 
     private void draw() {
