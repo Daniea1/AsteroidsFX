@@ -30,3 +30,7 @@ replay_pid*
 /Bullet/target/
 /CommonBullet/target/
 /.idea/
+
+CollisionSystem/target/surefire-reports/dk.sdu.mmmi.cbse.collisionsystem.CollisionControlSystemTest.txt
+
+CollisionSystem/target/surefire-reports/TEST-dk.sdu.mmmi.cbse.collisionsystem.CollisionControlSystemTest.xml
