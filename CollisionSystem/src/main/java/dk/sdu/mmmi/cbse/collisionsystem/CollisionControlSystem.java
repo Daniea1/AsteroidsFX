@@ -1,14 +1,13 @@
 package dk.sdu.mmmi.cbse.collisionsystem;
 
-import dk.sdu.mmmi.cbse.asteroidsystem.Asteroids;
+import dk.sdu.cbse.common.asteroids.Asteroids;
+import dk.sdu.cbse.common.enemy.Enemy;
+import dk.sdu.cbse.common.player.Player;
 import dk.sdu.mmmi.cbse.common.bullet.Bullet;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
-import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
-import dk.sdu.mmmi.cbse.enemysystem.Enemy;
-import dk.sdu.mmmi.cbse.playersystem.Player;
 
 import static java.lang.Math.sqrt;
 
@@ -16,6 +15,7 @@ import static java.lang.Math.sqrt;
 public class CollisionControlSystem implements IEntityProcessingService {
     @Override
     public void process(GameData gameData, World world) {
+
         // for loop for collision between bullet and asteroids
         for (Entity entityBullet : world.getEntities(Bullet.class)) {
             for (Entity entityAsteroid : world.getEntities(Asteroids.class)) {
@@ -33,6 +33,15 @@ public class CollisionControlSystem implements IEntityProcessingService {
         for (Entity entityShip : world.getEntities(Player.class)) {
             for (Entity entityAsteroid : world.getEntities(Asteroids.class)) {
                 if (isCollided(entityAsteroid, entityShip)) {
+                    world.removeEntity(entityShip);
+                }
+            }
+        }
+
+        // for loop for collision between ship and enemyShip
+        for (Entity entityShip : world.getEntities(Player.class)) {
+            for (Entity entityEnemy : world.getEntities(Enemy.class)) {
+                if (isCollided(entityEnemy, entityShip)) {
                     world.removeEntity(entityShip);
                 }
             }
