@@ -9,6 +9,7 @@ module Asteroids {
     requires Common;
     requires CommonBullet;
     requires CommonAsteroids;
+    requires java.net.http;
     uses dk.sdu.mmmi.cbse.common.bullet.BulletSPI;
     provides IGamePluginService with AsteroidsPlugin;
     provides IEntityProcessingService with AsteroidsControlSystem;
