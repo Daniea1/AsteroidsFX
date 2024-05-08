@@ -15,6 +15,7 @@ import static java.lang.Math.sqrt;
 public class CollisionControlSystem implements IEntityProcessingService {
     @Override
     public void process(GameData gameData, World world) {
+
         // for loop for collision between bullet and asteroids
         for (Entity entityBullet : world.getEntities(Bullet.class)) {
             for (Entity entityAsteroid : world.getEntities(Asteroids.class)) {
@@ -32,6 +33,15 @@ public class CollisionControlSystem implements IEntityProcessingService {
         for (Entity entityShip : world.getEntities(Player.class)) {
             for (Entity entityAsteroid : world.getEntities(Asteroids.class)) {
                 if (isCollided(entityAsteroid, entityShip)) {
+                    world.removeEntity(entityShip);
+                }
+            }
+        }
+
+        // for loop for collision between ship and enemyShip
+        for (Entity entityShip : world.getEntities(Player.class)) {
+            for (Entity entityEnemy : world.getEntities(Enemy.class)) {
+                if (isCollided(entityEnemy, entityShip)) {
                     world.removeEntity(entityShip);
                 }
             }
