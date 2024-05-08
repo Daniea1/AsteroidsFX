@@ -58,7 +58,7 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
                     try {
                         response = client.send(request, HttpResponse.BodyHandlers.ofString());
                         gameData.getLabels().clear();
-                        gameData.addLabel("Score: " + response.body());
+                        gameData.addLabel("Asteroids destroyed: " + response.body());
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     } catch (InterruptedException e) {
