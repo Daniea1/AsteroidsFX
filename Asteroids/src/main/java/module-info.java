@@ -5,7 +5,6 @@ import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 
 module Asteroids {
-    exports dk.sdu.mmmi.cbse.asteroidsystem;
     requires Common;
     requires CommonBullet;
     requires CommonAsteroids;
