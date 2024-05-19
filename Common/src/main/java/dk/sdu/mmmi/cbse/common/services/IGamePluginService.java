@@ -10,7 +10,7 @@ public interface IGamePluginService {
      * Skal kaldes når man starter spillet og igen når man slutter spillet
      *
      * Pre-condtion: At der findes en verden, den må ik være null.
-     * Post-condtioon: At man kan tilføje til verden.
+     * Post-condtion: At man kan tilføje til verden.
      *
      * @param gameData
      * @param world
