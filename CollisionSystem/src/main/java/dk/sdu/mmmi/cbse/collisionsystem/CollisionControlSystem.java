@@ -12,18 +12,18 @@ public class CollisionControlSystem implements IPostEntityProcessingService {
     @Override
     public void process(GameData gameData, World world) {
 
-        for (Entity entity:world.getEntities()) {
-            for (Entity entity1:world.getEntities()){
-                if(isCollided(entity, entity1) && entity.getClass() != entity1.getClass()){
+        for (Entity entity : world.getEntities()) {
+            for (Entity entity1 : world.getEntities()) {
+                if (isCollided(entity, entity1) && entity.getClass() != entity1.getClass()) {
 
-                    entity.setHitPoints(entity.getHitPoints()-1);
-                    entity1.setHitPoints(entity1.getHitPoints()-1);
+                    entity.setHealthPoints(entity.getHealthPoints() - 1);
+                    entity1.setHealthPoints(entity1.getHealthPoints() - 1);
 
                     // Change hitpoints
-                    if(entity1.getHitPoints()<1){
+                    if (entity1.getHealthPoints() < 1) {
                         world.removeEntity(entity1);
                     }
-                    if(entity.getHitPoints()<1){
+                    if (entity.getHealthPoints() < 1) {
                         world.removeEntity(entity);
                     }
                 }
