@@ -1,9 +1,5 @@
 package dk.sdu.mmmi.cbse.collisionsystem;
 
-import dk.sdu.cbse.common.asteroids.Asteroids;
-import dk.sdu.cbse.common.enemy.Enemy;
-import dk.sdu.cbse.common.player.Player;
-import dk.sdu.mmmi.cbse.common.bullet.Bullet;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
@@ -16,59 +12,20 @@ public class CollisionControlSystem implements IPostEntityProcessingService {
     @Override
     public void process(GameData gameData, World world) {
 
-        // for loop for collision between bullet and asteroids
-        for (Entity entityBullet : world.getEntities(Bullet.class)) {
-            for (Entity entityAsteroid : world.getEntities(Asteroids.class)) {
-                if (isCollided(entityAsteroid, entityBullet)) {
-                    entityAsteroid.setHitPoints(entityAsteroid.getHitPoints() - 1);
-                    if (entityAsteroid.getHitPoints()<1){
-                        world.removeEntity(entityAsteroid);
+        for (Entity entity:world.getEntities()) {
+            for (Entity entity1:world.getEntities()){
+                if(isCollided(entity, entity1) && entity.getClass() != entity1.getClass()){
+
+                    entity.setHitPoints(entity.getHitPoints()-1);
+                    entity1.setHitPoints(entity1.getHitPoints()-1);
+
+                    // Change hitpoints
+                    if(entity1.getHitPoints()<1){
+                        world.removeEntity(entity1);
                     }
-                    world.removeEntity(entityBullet);
-                }
-            }
-        }
-
-        // for loop for collision between ship and asteroids
-        for (Entity entityShip : world.getEntities(Player.class)) {
-            for (Entity entityAsteroid : world.getEntities(Asteroids.class)) {
-                if (isCollided(entityAsteroid, entityShip)) {
-                    world.removeEntity(entityShip);
-                }
-            }
-        }
-
-        // for loop for collision between ship and enemyShip
-        for (Entity entityShip : world.getEntities(Player.class)) {
-            for (Entity entityEnemy : world.getEntities(Enemy.class)) {
-                if (isCollided(entityEnemy, entityShip)) {
-                    world.removeEntity(entityShip);
-                }
-            }
-        }
-
-        // for loop for collision between bullet and Enemy
-        for (Entity entityEnemy : world.getEntities(Enemy.class)) {
-            for (Entity entityBullet : world.getEntities(Bullet.class)) {
-                if (isCollided(entityEnemy, entityBullet)) {
-                    entityEnemy.setHitPoints(entityEnemy.getHitPoints()-1);
-                    if (entityEnemy.getHitPoints()<1) {
-                        world.removeEntity(entityEnemy);
+                    if(entity.getHitPoints()<1){
+                        world.removeEntity(entity);
                     }
-                    world.removeEntity(entityBullet);
-                }
-            }
-        }
-
-        // for loop for collision between bullet and Player
-        for (Entity entityPlayer : world.getEntities(Player.class)) {
-            for (Entity entityBullet : world.getEntities(Bullet.class)) {
-                if (isCollided(entityPlayer, entityBullet)) {
-                    entityPlayer.setHitPoints(entityPlayer.getHitPoints()-1);
-                    if (entityPlayer.getHitPoints()<1) {
-                        world.removeEntity(entityPlayer);
-                    }
-                    world.removeEntity(entityBullet);
                 }
             }
         }
