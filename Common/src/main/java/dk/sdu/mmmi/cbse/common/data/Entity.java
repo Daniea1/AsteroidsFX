@@ -13,7 +13,7 @@ public class Entity implements Serializable {
     private double y;
     private double rotation;
 
-    private int hitPoints;
+    private int healthPoints;
             
 
     public String getID() {
@@ -63,11 +63,11 @@ public class Entity implements Serializable {
         return rotation;
     }
 
-    public void setHitPoints(int hitPoints){
-        this.hitPoints = hitPoints;
+    public void setHealthPoints(int healthPoints){
+        this.healthPoints = healthPoints;
     }
 
-    public int getHitPoints() {
-        return hitPoints;
+    public int getHealthPoints() {
+        return healthPoints;
     }
 }

@@ -21,7 +21,7 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
                 bigAsteroids.setX(bigAsteroids.getX() + changeX);
                 bigAsteroids.setY(bigAsteroids.getY() + changeY);
 
-                if (bigAsteroids.getHitPoints() == 2){
+                if (bigAsteroids.getHealthPoints() == 2){
 
                     Entity asteroidsSmallRight = new HelloWorld();
                     asteroidsSmallRight.setPolygonCoordinates(0, -10, 8, -5, 8, 5, 0, 10, -8, 5, -8, -5);
@@ -60,7 +60,7 @@ public class AsteroidsControlSystem implements IEntityProcessingService {
         asteroids.setX(randomXwidth);
         asteroids.setY(0);
         asteroids.setRotation(90);
-        asteroids.setHitPoints(4);
+        asteroids.setHealthPoints(4);
         return asteroids;
     }
 

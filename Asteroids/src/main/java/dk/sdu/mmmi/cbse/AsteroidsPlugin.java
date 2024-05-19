@@ -27,7 +27,7 @@ public class AsteroidsPlugin implements IGamePluginService {
         asteroids.setX(gameData.getDisplayWidth()/2);
         asteroids.setY(0);
         asteroids.setRotation(90);
-        asteroids.setHitPoints(4);
+        asteroids.setHealthPoints(4);
         return asteroids;
     }
 
