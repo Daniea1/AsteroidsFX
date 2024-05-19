@@ -6,6 +6,7 @@ import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
+
 public class AsteroidsPlugin implements IGamePluginService {
 
     private Entity Asteroids;
@@ -34,11 +35,8 @@ public class AsteroidsPlugin implements IGamePluginService {
 
     @Override
     public void stop(GameData gameData, World world) {
-        for (Entity e : world.getEntities()) {
-            if (e.getClass() == Bullet.class) {
-                world.removeEntity(e);
-            }
-        }
+        // Remove entities
+        world.removeEntity(Asteroids);
     }
 
 }
