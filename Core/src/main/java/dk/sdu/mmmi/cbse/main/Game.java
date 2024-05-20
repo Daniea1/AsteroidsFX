@@ -117,9 +117,9 @@ class Game {
             }
         }
 
-//        for (IPostEntityProcessingService postEntityProcessorService : getPostEntityProcessingServices()) {
-//            postEntityProcessorService.process(gameData, world);
-//        }
+        for (IPostEntityProcessingService postEntityProcessorService : getPostEntityProcessingServices()) {
+            postEntityProcessorService.process(gameData, world);
+        }
     }
 
 
@@ -161,3 +161,4 @@ class Game {
     }
 
 }
+
